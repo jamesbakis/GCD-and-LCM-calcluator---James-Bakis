@@ -1,7 +1,7 @@
 .default: GCDLCM
 
-GCDLCM: main.o
-	g++ -Wall -Werror -std=c++17 -O -o $@ $^ && make clean
+GCDLCM: main.o factor.o
+	g++ -Wall -Werror -std=c++17 -O -o $@ $^
 
 %.o: %.cpp
 	g++ -Wall -Werror -std=c++17 -O -c $^
